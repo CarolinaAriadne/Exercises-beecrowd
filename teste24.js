@@ -26,50 +26,64 @@ let minutoFinal = +tempoFinal.slice(5, 7);
 
 let segundoFinal = +tempoFinal.slice(10);
 
-function dataInicialParaSegundos() {
-  let diaInicialEmSegundos = diaInicial * 24 * 60 * 60;
-
-  let horaInicialEmSegundos = horaInicial * 60 * 60;
-
-  let minutoInicialEmSegundos = minutoInicial * 60;
-
-  let dataInicialEmSegundos =
-    segundoInicial +
-    diaInicialEmSegundos +
-    horaInicialEmSegundos +
-    minutoInicialEmSegundos;
-
-  return dataInicialEmSegundos;
-}
-
-let returnFunctionDataInicial = dataInicialParaSegundos();
-
-function dataFinalParaSegundos() {
-  let diaFinalEmSegundos = diaFinal * 24 * 60 * 60;
-
-  let horaFinalEmSegundos = horaFinal * 60 * 60;
-
-  let minutoFinalEmSegundos = minutoFinal * 60;
-
-  let dataFinalEmSegundos =
-    segundoFinal +
-    diaFinalEmSegundos +
-    horaFinalEmSegundos +
-    minutoFinalEmSegundos;
-
-  return dataFinalEmSegundos;
-}
-
-let returnFunctionDataFinal = dataFinalParaSegundos();
-
 let subtraiDatas = 0;
 
-if (returnFunctionDataFinal > returnFunctionDataInicial) {
-  subtraiDatas = returnFunctionDataFinal - returnFunctionDataInicial;
+let resultDiaInicialParaSegundo = DiaParaSegundos(diaInicial);
+
+let resultDiaFinalParaSegundo = DiaParaSegundos(diaFinal);
+
+let resultHoraInicialParaSegundo = HoraParaSegundos(horaInicial);
+
+let resultHoraFinalParaSegundo = HoraParaSegundos(horaFinal);
+
+let resultMinutoInicialParaSegundo = MinutoParaSegundos(minutoInicial);
+
+let resultMinutoFinalParaSegundo = MinutoParaSegundos(minutoFinal);
+
+let somaDataInicial = somaDatas(
+  segundoInicial,
+  resultDiaInicialParaSegundo,
+  resultHoraInicialParaSegundo,
+  resultMinutoInicialParaSegundo
+);
+
+let somaDataFinal = somaDatas(
+  segundoFinal,
+  resultDiaFinalParaSegundo,
+  resultHoraFinalParaSegundo,
+  resultMinutoFinalParaSegundo
+);
+
+function DiaParaSegundos(dia) {
+  let diaEmSegundos = dia * 24 * 60 * 60;
+
+  return diaEmSegundos;
 }
 
-if (returnFunctionDataFinal < returnFunctionDataInicial) {
-  subtraiDatas = returnFunctionDataInicial - returnFunctionDataFinal;
+function HoraParaSegundos(hora) {
+  let horaEmSegundos = hora * 60 * 60;
+
+  return horaEmSegundos;
+}
+
+function MinutoParaSegundos(minuto) {
+  let minutoEmSegundos = minuto * 60;
+
+  return minutoEmSegundos;
+}
+
+function somaDatas(segundo, diaS, horaS, minutoS) {
+  let somaDasDatas = segundo + diaS + horaS + minutoS;
+
+  return somaDasDatas;
+}
+
+if (somaDataFinal > somaDataInicial) {
+  subtraiDatas = somaDataFinal - somaDataInicial;
+}
+
+if (somaDataFinal < somaDataInicial) {
+  subtraiDatas = somaDataInicial - somaDataFinal;
 }
 
 if (subtraiDatas < 60) {
@@ -89,4 +103,3 @@ function segundosParaDiaHoraMinutoSegundos(segundos) {
 }
 
 segundosParaDiaHoraMinutoSegundos(subtraiDatas);
-
