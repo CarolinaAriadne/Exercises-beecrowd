@@ -18,7 +18,6 @@ for (let index = 0; index < array.length; index += 1) {
     let arrayNumber = array[index].map((item) => {
       return Number(item);
     });
-    console.log(arrayNumber, "aqui");
     arrayNumber = arrayNumber.sort((a, b) => {
       return a - b;
     });
