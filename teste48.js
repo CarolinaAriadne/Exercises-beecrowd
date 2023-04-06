@@ -24,6 +24,8 @@ const arrayNumbers = (arr) => {
 
 let result = arrayNumbers(lines);
 
+console.log(result);
+
 const resultadoDivisao = (arr) => {
   for (let i = 0; i < arr.length; i += 1) {
     let count = arr[i][0];
@@ -31,11 +33,8 @@ const resultadoDivisao = (arr) => {
       console.log("divisao impossivel");
     }
     count = count / arr[i][1];
-    if (count === Infinity) {
-     break;
-    }else{
-        console.log(count)
-    }
+   
+      console.log(count);
   }
 };
 resultadoDivisao(result);
