@@ -4,6 +4,7 @@ let arrayNumbers = lines.slice(1);
 
 let array1 = arrayNumbers.shift().split(" ");
 
+
 let array2 = arrayNumbers.shift().split(" ");
 
 let array3 = arrayNumbers.shift().split(" ");

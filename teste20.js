@@ -2,6 +2,8 @@ let lines = ["3002.00", ""];
 
 let entrada = lines.shift().split(" ");
 
+console.log(entrada)
+
 // let number1 = +entrada[0];
 // let isento = 2000.00;
 // let salarioAcima = 4500.00;
