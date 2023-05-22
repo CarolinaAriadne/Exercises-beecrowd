@@ -1,48 +1,38 @@
 // feito em c# - 1118
 
-// ﻿using System;
+// using System;
+// using System.Globalization;
 
-// namespace uri1018 {
+// namespace uri1118 {
 //     class Program {
 //         static void Main(string[] args) {
-//             int N, quociente, resto, nota;
 
-//             N = int.Parse(Console.ReadLine());
-//             Console.WriteLine(N);
+//             int novoCalculo = 1;
 
-//             resto = N;
+//             while (novoCalculo == 1) {
+//                 double nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//                 while (nota1 < 0.0 || nota1 > 10.0) {
+//                     Console.WriteLine("nota invalida");
+//                     nota1 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//                 }
 
-//             nota = 100;
-//             quociente = resto / nota;
-//             Console.WriteLine(quociente + " nota(s) de R$ " + nota + ",00");
-//             resto = resto % nota;
+//                 double nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//                 while (nota2 < 0.0 || nota2 > 10.0) {
+//                     Console.WriteLine("nota invalida");
+//                     nota2 = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+//                 }
 
-//             nota = 50;
-//             quociente = resto / nota;
-//             Console.WriteLine(quociente + " nota(s) de R$ " + nota + ",00");
-//             resto = resto % nota;
+//                 double media = (nota1 + nota2) / 2.0;
+//                 Console.WriteLine("media = " + media.ToString("F2", CultureInfo.InvariantCulture));
 
-//             nota = 20;
-//             quociente = resto / nota;
-//             Console.WriteLine(quociente + " nota(s) de R$ " + nota + ",00");
-//             resto = resto % nota;
-
-//             nota = 10;
-//             quociente = resto / nota;
-//             Console.WriteLine(quociente + " nota(s) de R$ " + nota + ",00");
-//             resto = resto % nota;
-
-//             nota = 5;
-//             quociente = resto / nota;
-//             Console.WriteLine(quociente + " nota(s) de R$ " + nota + ",00");
-//             resto = resto % nota;
-
-//             nota = 2;
-//             quociente = resto / nota;
-//             Console.WriteLine(quociente + " nota(s) de R$ " + nota + ",00");
-//             resto = resto % nota;
-
-//             Console.WriteLine(resto + " nota(s) de R$ 1,00");
+//                 Console.WriteLine("novo calculo (1-sim 2-nao)");
+//                 novoCalculo = int.Parse(Console.ReadLine());
+//                 while (novoCalculo != 1 && novoCalculo != 2) {
+//                     Console.WriteLine("novo calculo (1-sim 2-nao)");
+//                     novoCalculo = int.Parse(Console.ReadLine());
+//                 }
+//             }
 //         }
 //     }
 // }
+
